@@ -1,0 +1,25 @@
+﻿@model WebApplication7.Models.Maths
+@{
+    ViewBag.Title = "New";
+}
+
+<h2>Strongly Type Helpers Demo</h2>
+
+@using (Html.BeginForm())
+{
+    <div class="form-group">
+        @Html.LabelFor(m=>m.firstnum, new { @class = "control-label"})
+        @Html.TextBoxFor(m=>m.firstnum, new { @class= "form-control"})
+        </div>
+    <div class="form-group">
+        @Html.LabelFor(m=>m.secondnum, new { @class="control-label"})
+        @Html.TextBoxFor(m=>m.secondnum, new {@class="form-control" })
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Result" class="btn btn-primary" />
+    </div>
+    <div class=" alert alert-success">
+        <p> Result : @ViewData["Answer"]</p>
+    </div>
+}
+
